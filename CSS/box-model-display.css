@@ -1,0 +1,90 @@
+/* Global reset - almost every real project starts with this.
+   Makes "width" include padding and border, instead of adding
+   them on top of the width you set. */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, Arial, sans-serif;
+  color: #1f2933;
+  background-color: #fafaf7;
+  margin: 20px;
+}
+
+/* ============================================
+   PART 1: THE BOX MODEL
+   content -> padding -> border -> margin
+============================================= */
+
+.box {
+  width: 200px;
+  padding: 20px;
+  border: 4px solid #0f766e;
+  margin: 30px;
+  background-color: #e6f4f1;
+}
+
+.box-2 {
+  width: 200px;
+  padding: 10px;
+  border: 2px solid #b45309;
+  margin: 15px;
+  background-color: #fef3c7;
+}
+
+.box-3 {
+  width: 200px;
+  padding: 30px;
+  border: 1px solid #64748b;
+  margin: 10px;
+  background-color: #e2e8f0;
+}
+
+/* ============================================
+   PART 2: DISPLAY - block, inline, inline-block
+============================================= */
+
+.demo-block {
+  background-color: #d1fae5;
+  padding: 10px;
+}
+
+span.demo-inline {
+  background-color: #fde68a;
+}
+
+span.demo-inline-block {
+  background-color: #a7f3d0;
+  padding: 10px;
+  width: 100px;
+  display: inline-block;
+}
+
+/* ============================================
+   PART 3: BORDERS, RADIUS, SHADOW, BACKGROUNDS
+============================================= */
+
+.card {
+  width: 250px;
+  padding: 16px;
+  margin: 20px 0;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.circle {
+  width: 80px;
+  height: 80px;
+  background-color: #0f766e;
+  border-radius: 50%;
+}
+
+/* EXERCISE:
+   1. Make three .box divs with different background-colors
+      and padding/margin values. Predict the rendered size
+      before refreshing.
+   2. Turn one .box into a .card - white background, light
+      border, rounded corners, subtle shadow. */

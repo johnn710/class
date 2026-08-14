@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Session 1 - Selectors, Text, Colors</title>
+  <link rel="stylesheet" href="session-1-selectors-text-colors.css">
+</head>
+<body>
+
+  <h1 id="main-title">Selectors, Text &amp; Color</h1>
+
+  <!-- ============================================
+       PART 2: SELECTORS
+  ============================================= -->
+
+  <p>This is a plain paragraph, styled by the element selector.</p>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </nav>
+  <p>The nav links above have no underline, thanks to the <code>nav a</code> descendant selector.</p>
+
+  <!-- ============================================
+       PART 3: SPECIFICITY DEMO
+       This element has both a class and an id.
+       Whichever rule is more specific wins - see the
+       CSS file for the two competing rules.
+  ============================================= -->
+
+  <p id="specificity-winner" class="specificity-demo">What color am I, and why?</p>
+
+  <!-- ============================================
+       PART 4: TEXT AND COLOR STYLING
+  ============================================= -->
+
+  <h2>About Me</h2>
+  <p>This paragraph uses the base text color and line-height set on <code>body</code>.</p>
+
+  <p class="center-text">This paragraph is centered using the <code>.center-text</code> class.</p>
+
+  <!-- EXERCISE: add a paragraph below with class="highlight" -->
+
+</body>
+</html>

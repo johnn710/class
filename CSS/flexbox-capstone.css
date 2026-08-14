@@ -1,0 +1,201 @@
+/* Global reset - every project starts here */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, Arial, sans-serif;
+  color: #1f2933;
+  background-color: #fafaf7;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0 20px 40px;
+}
+
+/* ============================================
+   PART 1 + CAPSTONE STEP 2: HEADER & NAV (FLEXBOX)
+============================================= */
+
+header {
+  padding: 20px 0;
+  border-bottom: 1px solid #e2e8f0;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  color: #0f766e;
+  margin: 0 0 10px;
+}
+
+.nav-flex {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-flex a {
+  color: #0f766e;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-flex a:hover {
+  text-decoration: underline;
+}
+
+/* ============================================
+   CAPSTONE STEP 1: LAYOUT WRAPPER
+============================================= */
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* ============================================
+   CAPSTONE STEP 3: SECTIONS AS CARDS
+============================================= */
+
+section,
+article,
+aside {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+section h2,
+article h2,
+aside h2 {
+  color: #0f766e;
+  margin-top: 0;
+}
+
+section img {
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+aside ul {
+  padding-left: 20px;
+}
+
+/* ============================================
+   PART 1 DEMO: CENTERING WITH FLEXBOX
+   (not part of the final page - just a scratch
+   example to try justify-content / align-items on)
+============================================= */
+
+.center-demo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  background-color: #e6f4f1;
+  border-radius: 12px;
+}
+
+/* ============================================
+   CAPSTONE STEP 4: TABLE
+============================================= */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+caption {
+  text-align: left;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+th, td {
+  text-align: left;
+  padding: 10px;
+  border: 1px solid #e2e8f0;
+}
+
+thead th {
+  background-color: #e6f4f1;
+  color: #0f766e;
+}
+
+/* ============================================
+   CAPSTONE STEP 5: FORM
+============================================= */
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  max-width: 400px;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 4px;
+  display: block;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+fieldset {
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 12px;
+}
+
+button {
+  align-self: flex-start;
+  padding: 10px 20px;
+  background-color: #0f766e;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0c5c56;
+}
+
+/* ============================================
+   CAPSTONE STEP 6: FOOTER
+============================================= */
+
+footer {
+  text-align: center;
+  color: #64748b;
+  padding: 20px 0;
+  margin-top: 20px;
+}
+
+/* ============================================
+   PART 2: RESPONSIVE PREVIEW
+   Shrink the browser window below 600px wide
+   and watch the nav switch from a row to a stack.
+============================================= */
+
+@media (max-width: 600px) {
+  .nav-flex {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

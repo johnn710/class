@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Session 2 - Box Model, Display</title>
+  <link rel="stylesheet" href="session-2-box-model-display.css">
+</head>
+<body>
+
+  <h1>The Box Model &amp; Display</h1>
+
+  <!-- ============================================
+       PART 1: THE BOX MODEL
+       Open browser dev tools and hover each box to see
+       the browser's own content/padding/border/margin
+       diagram for it.
+  ============================================= -->
+
+  <div class="box">width: 200px, padding: 20px</div>
+  <div class="box-2">width: 200px, padding: 10px</div>
+  <div class="box-3">width: 200px, padding: 30px</div>
+
+  <!-- All three are set to width: 200px, but render at the
+       same visible width because of box-sizing: border-box
+       in the CSS file. Try commenting that rule out and
+       refreshing to see the difference. -->
+
+  <!-- ============================================
+       PART 2: DISPLAY - block, inline, inline-block
+  ============================================= -->
+
+  <div class="demo-block">I am a block element and take the full width.</div>
+  <span class="demo-inline">I am inline - I don't take a new line, and width/height are ignored.</span>
+  <span class="demo-inline-block">I'm inline-block - I sit inline, but padding/width work.</span>
+
+  <!-- ============================================
+       PART 3: BORDERS, RADIUS, SHADOW, BACKGROUNDS
+  ============================================= -->
+
+  <div class="card">
+    <h2>Card Title</h2>
+    <p>A card is just a styled box: background, border, rounded corners, shadow.</p>
+  </div>
+
+  <div class="circle"></div>
+
+  <!-- EXERCISE: add two more .box divs below with your own
+       padding/margin values -->
+
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Session 3 - Flexbox &amp; Styled Capstone</title>
+  <link rel="stylesheet" href="session-3-flexbox-capstone.css">
+</head>
+<body>
+
+  <!-- ============================================
+       PART 1: FLEXBOX SCRATCH DEMO
+       Not part of the final page - just try different
+       justify-content / align-items values here first.
+  ============================================= -->
+
+  <div class="center-demo">
+    <p>I'm centered both ways with display: flex.</p>
+  </div>
+
+  <!-- ============================================
+       CAPSTONE: THE STYLED HTML CLASS PAGE
+       Same structure as session-3-semantic-tables-project.html
+       from the HTML class, now with real CSS applied.
+  ============================================= -->
+
+  <header>
+    <h1>My Site</h1>
+    <nav class="nav-flex">
+      <a href="#about">About</a>
+      <a href="#schedule">Schedule</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <section id="about">
+      <h2>About</h2>
+      <p>
+        This section describes the page's main topic: my journey learning
+        HTML, CSS, and Flask.
+      </p>
+      <img src="https://placehold.co/300x180" alt="Placeholder photo representing my learning journey" width="300" height="180">
+    </section>
+
+    <article>
+      <h2>Study Log: Week 1</h2>
+      <p>
+        This week I finished HTML and CSS basics and I'm ready to start
+        connecting everything to Flask.
+      </p>
+    </article>
+
+    <aside>
+      <h2>Related Links</h2>
+      <ul>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" rel="noopener">MDN: CSS Reference</a></li>
+        <li><a href="https://flexboxfroggy.com/" target="_blank" rel="noopener">Flexbox Froggy (practice game)</a></li>
+      </ul>
+    </aside>
+
+    <section id="schedule">
+      <h2>Weekly Study Schedule</h2>
+      <table>
+        <caption>My HTML/CSS/Flask study plan</caption>
+        <thead>
+          <tr>
+            <th>Day</th>
+            <th>Topic</th>
+            <th>Hours</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Monday</td>
+            <td>HTML</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>Wednesday</td>
+            <td>CSS</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>Friday</td>
+            <td>Flask</td>
+            <td>3</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <form action="/submit" method="POST">
+
+        <div>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" placeholder="Your full name" required>
+        </div>
+
+        <div>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <fieldset>
+          <legend>Preferred contact method</legend>
+          <input type="radio" id="contact-email" name="contact_method" value="email" checked>
+          <label for="contact-email">Email</label>
+
+          <input type="radio" id="contact-phone" name="contact_method" value="phone">
+          <label for="contact-phone">Phone</label>
+        </fieldset>
+
+        <div>
+          <label for="topic">Topic:</label>
+          <select id="topic" name="topic">
+            <option value="general">General question</option>
+            <option value="support">Support</option>
+            <option value="feedback">Feedback</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="4" placeholder="Type here..."></textarea>
+        </div>
+
+        <button type="submit">Send</button>
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 My Site. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

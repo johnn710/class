@@ -1,0 +1,79 @@
+/* ============================================
+   PART 2: SELECTORS
+============================================= */
+
+/* Element selector - targets every <p> on the page */
+p {
+  color: #1f2933;
+  font-size: 1rem;
+}
+
+/* Class selector - targets any element with class="highlight" */
+.highlight {
+  color: #b45309;
+  font-weight: bold;
+}
+
+/* ID selector - targets the one element with id="main-title" */
+#main-title {
+  color: #0f766e;
+}
+
+/* Grouping - apply the same rule to multiple selectors at once */
+h1, h2, h3 {
+  font-family: Georgia, serif;
+}
+
+/* Descendant selector - targets <a> tags, but only inside <nav> */
+nav a {
+  text-decoration: none;
+}
+
+/* ============================================
+   PART 3: SPECIFICITY DEMO
+   This <p> has both an id and a class. Try commenting
+   rules below out one at a time and refresh to see
+   which one wins.
+============================================= */
+
+.specificity-demo {
+  color: orange;
+}
+
+#specificity-winner {
+  color: teal;
+}
+
+/* ============================================
+   PART 4: TEXT AND COLOR STYLING
+============================================= */
+
+body {
+  font-family: system-ui, Arial, sans-serif;
+  color: #1f2933;
+  background-color: #fafaf7;
+  line-height: 1.6;
+  margin: 20px;
+}
+
+h1, h2, h3 {
+  color: #0f766e;
+}
+
+a {
+  color: #0f766e;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.center-text {
+  text-align: center;
+}
+
+/* EXERCISE:
+   1. Add a paragraph with class="highlight" in the HTML file
+      and confirm it turns orange/bold.
+   2. Pick two colors of your own and restyle h1 and links
+      to use them instead of the teal above. */
