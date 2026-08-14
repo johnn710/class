@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Session 3 - Semantic Layout, Tables, Capstone</title>
+</head>
+<body>
+
+  <!-- ============================================
+       PART 1: SEMANTIC LAYOUT
+       These tags look identical to a <div> on screen.
+       Their value is meaning - for accessibility tools,
+       search engines, and other developers reading the code.
+  ============================================= -->
+
+  <header>
+    <h1>My Site</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#schedule">Schedule</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <section id="about">
+      <h2>About</h2>
+      <p>
+        This section describes the page's main topic: my journey learning
+        HTML, CSS, and Flask.
+      </p>
+      <img src="https://placehold.co/300x180" alt="Placeholder photo representing my learning journey" width="300" height="180">
+    </section>
+
+    <article>
+      <h2>Study Log: Week 1</h2>
+      <p>
+        An <code>&lt;article&gt;</code> is content that could stand alone,
+        like a blog post - this week I finished the HTML basics and I'm
+        ready to move on to CSS.
+      </p>
+    </article>
+
+    <aside>
+      <h2>Related Links</h2>
+      <p>Side content, tangential to the main flow - like a sidebar.</p>
+      <ul>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" rel="noopener">MDN: HTML Reference</a></li>
+        <li><a href="https://flask.palletsprojects.com/" target="_blank" rel="noopener">Flask Documentation</a></li>
+      </ul>
+    </aside>
+
+    <!-- ============================================
+         PART 2: TABLES
+         Only for tabular data - rows and columns of
+         related data. Not for page layout.
+    ============================================= -->
+
+    <section id="schedule">
+      <h2>Weekly Study Schedule</h2>
+      <table>
+        <caption>My HTML/CSS/Flask study plan</caption>
+        <thead>
+          <tr>
+            <th>Day</th>
+            <th>Topic</th>
+            <th>Hours</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Monday</td>
+            <td>HTML</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>Wednesday</td>
+            <td>CSS</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>Friday</td>
+            <td>Flask</td>
+            <td>3</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ============================================
+         PART 3: CAPSTONE - CONTACT FORM
+         Same form from Session 2, unchanged. This is
+         the piece that will eventually POST to a real
+         Flask route.
+    ============================================= -->
+
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <form action="/submit" method="POST">
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Your full name" required>
+        <br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br><br>
+
+        <fieldset>
+          <legend>Preferred contact method</legend>
+          <input type="radio" id="contact-email" name="contact_method" value="email" checked>
+          <label for="contact-email">Email</label>
+
+          <input type="radio" id="contact-phone" name="contact_method" value="phone">
+          <label for="contact-phone">Phone</label>
+        </fieldset>
+
+        <label for="topic">Topic:</label>
+        <select id="topic" name="topic">
+          <option value="general">General question</option>
+          <option value="support">Support</option>
+          <option value="feedback">Feedback</option>
+        </select>
+        <br><br>
+
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="4" cols="40" placeholder="Type here..."></textarea>
+        <br><br>
+
+        <button type="submit">Send</button>
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 My Site. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

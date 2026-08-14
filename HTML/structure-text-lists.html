@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Session 1 - Structure, Text, Lists</title>
+</head>
+<body>
+
+  <!-- ============================================
+       PART 1: DOCUMENT STRUCTURE
+       Everything visible lives in <body>.
+       The <head> above holds metadata only -
+       nothing in <head> shows up on the page.
+  ============================================= -->
+
+  <h1>Welcome to My Page</h1>
+
+  <!-- ============================================
+       PART 2: TEXT TAGS
+  ============================================= -->
+
+  <h2>About Me</h2>
+  <p>I'm learning HTML so I can eventually build web apps with Flask.</p>
+
+  <h2>Why This Matters</h2>
+  <p>
+    HTML gives a page <strong>structure</strong> and <em>meaning</em>.
+    CSS makes it look good. JavaScript makes it interactive.
+  </p>
+
+  <p>Line one.<br>Line two, forced onto a new line with &lt;br&gt;.</p>
+
+  <hr>
+
+  <p>Small print like this: <small>terms and conditions apply</small></p>
+
+  <!-- Try it: delete the closing </strong> tag above and refresh.
+       Notice how much of the page's styling breaks. -->
+
+  <!-- ============================================
+       PART 3: LISTS
+  ============================================= -->
+
+  <h2>Things I Want to Learn</h2>
+  <ul>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>Flask</li>
+  </ul>
+
+  <h2>Steps to Run My First Flask App</h2>
+  <ol>
+    <li>Install Flask</li>
+    <li>Write app.py</li>
+    <li>Run <code>flask run</code></li>
+    <li>Open the browser</li>
+  </ol>
+
+  <h2>Nested Example</h2>
+  <ul>
+    <li>Frontend
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+      </ul>
+    </li>
+    <li>Backend
+      <ul>
+        <li>Flask</li>
+        <li>Databases</li>
+      </ul>
+    </li>
+  </ul>
+
+  <!-- ============================================
+       EXERCISE - try this yourself below:
+       1. Add an <h2> called "My Weekend Plan"
+       2. Add an ordered list with 3 steps
+       3. Add a second unordered list of 3 hobbies,
+          with one nested sub-list under one of them
+  ============================================= -->
+
+</body>
+</html>

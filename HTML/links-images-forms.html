@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Session 2 - Links, Images, Forms</title>
+</head>
+<body>
+
+  <h1>Links, Images, and Forms</h1>
+
+  <!-- ============================================
+       PART 1: LINKS
+  ============================================= -->
+
+  <h2>Links</h2>
+  <p>Visit <a href="https://flask.palletsprojects.com/">Flask's documentation</a>.</p>
+  <p>Jump to <a href="#contact">the contact section</a> further down this page.</p>
+  <p>Email me at <a href="mailto:student@example.com">student@example.com</a>.</p>
+  <p>Open in a new tab:
+    <a href="https://developer.mozilla.org" target="_blank" rel="noopener">MDN Docs</a>
+  </p>
+
+  <!-- Try it: change target="_blank" to target="_self" and click the
+       MDN link again. Notice the difference. -->
+
+  <!-- ============================================
+       PART 2: IMAGES
+  ============================================= -->
+
+  <h2>Images</h2>
+  <img src="https://placehold.co/300x200" alt="Placeholder image, 300 by 200 pixels" width="300" height="200">
+
+  <figure>
+    <img src="https://placehold.co/300x200" alt="A placeholder used as a figure example">
+    <figcaption>Figure 1: A placeholder image with a caption.</figcaption>
+  </figure>
+
+  <!-- Try it: misspell the src path on purpose (e.g. "placehold.co/broken")
+       and refresh. Notice the alt text is what shows up instead. -->
+
+  <!-- ============================================
+       PART 3: FORMS
+       The "name" attribute on each input is the key
+       Flask will read this value by later, e.g.
+       request.form['name'], request.form['email'], etc.
+  ============================================= -->
+
+  <h2 id="contact">Contact Me</h2>
+  <form action="/submit" method="POST">
+
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" placeholder="Your full name" required>
+    <br><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+    <br><br>
+
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age" min="1" max="120">
+    <br><br>
+
+    <fieldset>
+      <legend>Preferred contact method</legend>
+      <input type="radio" id="contact-email" name="contact_method" value="email" checked>
+      <label for="contact-email">Email</label>
+
+      <input type="radio" id="contact-phone" name="contact_method" value="phone">
+      <label for="contact-phone">Phone</label>
+    </fieldset>
+
+    <label for="topic">Topic:</label>
+    <select id="topic" name="topic">
+      <option value="general">General question</option>
+      <option value="support">Support</option>
+      <option value="feedback">Feedback</option>
+    </select>
+    <br><br>
+
+    <input type="checkbox" id="subscribe" name="subscribe" value="yes">
+    <label for="subscribe">Subscribe to updates</label>
+    <br><br>
+
+    <label for="message">Message:</label><br>
+    <textarea id="message" name="message" rows="4" cols="40" placeholder="Type here..."></textarea>
+    <br><br>
+
+    <button type="submit">Send</button>
+  </form>
+
+  <!-- EXERCISE:
+       Add one more field above the submit button: a date input for
+       "Preferred contact date". Give it a proper <label>, an id,
+       and a name of "contact_date". -->
+
+</body>
+</html>
