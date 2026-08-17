@@ -4,19 +4,19 @@
 
 /* Element selector - targets every <p> on the page */
 p {
-  color: #1f2933;
+  color: #bd0e45;
   font-size: 1rem;
 }
 
 /* Class selector - targets any element with class="highlight" */
 .highlight {
-  color: #b45309;
+  color: #ce1263;
   font-weight: bold;
 }
 
 /* ID selector - targets the one element with id="main-title" */
 #main-title {
-  color: #0f766e;
+  color: #1def51;
 }
 
 /* Grouping - apply the same rule to multiple selectors at once */
