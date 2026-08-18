@@ -1,0 +1,33 @@
+/* variables.css — Design system tokens (Section 19) */
+
+:root {
+  /* Colors */
+  --color-primary: #3498db;
+  --color-secondary: #764ba2;
+  --color-text: #333;
+  --color-text-light: #7f8c8d;
+  --color-bg-light: #f0f0f0;
+  --color-white: #ffffff;
+  --color-border: #ccc;
+
+  /* Spacing scale */
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2rem;
+  --space-6: 3rem;
+
+  /* Typography */
+  --font-size-base: 1.6rem;
+  --line-height-base: 1.6;
+
+  /* Radius */
+  --radius: 8px;
+
+  /* Breakpoints (for reference — media queries can't read custom
+     properties directly, but documenting them here keeps the
+     numbers in one place) */
+  --bp-tablet: 576px;
+  --bp-desktop: 992px;
+  --bp-nav: 768px;
+}

@@ -1,0 +1,49 @@
+/* base.css — Foundation styles for raw HTML elements */
+
+body {
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  color: var(--color-text);
+  line-height: var(--line-height-base);
+}
+
+h1, h2, h3 {
+  line-height: 1.3;
+  margin-bottom: var(--space-2);
+}
+
+h2 {
+  font-size: 2.2rem;
+  text-align: center;
+  color: var(--color-primary);
+}
+
+p {
+  margin-bottom: var(--space-2);
+}
+
+section {
+  padding: var(--space-6) var(--space-2);
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+section > p.section-intro {
+  text-align: center;
+  color: var(--color-text-light);
+  max-width: 600px;
+  margin: 0 auto var(--space-4);
+}
+
+/* --- Section 1: Text Styling Part 2 --- */
+.text-demo h1 {
+  text-align: center;
+  line-height: 1.6;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.text-demo .label {
+  text-decoration: underline;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-top: var(--space-2);
+}

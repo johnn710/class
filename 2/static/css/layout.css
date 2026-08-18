@@ -1,0 +1,28 @@
+/* layout.css — Page-level structure */
+
+.hero {
+  background: linear-gradient(45deg, var(--color-primary), var(--color-secondary));
+  color: white;
+  text-align: center;
+  padding: var(--space-6) var(--space-2);
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+}
+
+.hero .tagline {
+  font-size: 1.6rem;
+  opacity: 0.9;
+}
+
+.section-alt {
+  background: #fafafa;
+}
+
+footer {
+  text-align: center;
+  padding: var(--space-3);
+  color: var(--color-text-light);
+  font-size: 1.3rem;
+}

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 2 Demo — Display, Position & the Box Model</title>
+
+  <link rel="stylesheet" href="static/css/reset.css">
+  <link rel="stylesheet" href="static/css/variables.css">
+  <link rel="stylesheet" href="static/css/base.css">
+  <link rel="stylesheet" href="static/css/components.css">
+  <link rel="stylesheet" href="static/css/layout.css">
+  <link rel="stylesheet" href="static/css/responsive.css">
+</head>
+<body>
+
+  <!-- Section 9: Hamburger Nav -->
+  <nav class="site-nav">
+    <button class="nav-toggle" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="#text">Text</a></li>
+      <li><a href="#display">Display</a></li>
+      <li><a href="#tables">Tables</a></li>
+      <li><a href="#cards">Cards</a></li>
+      <li><a href="#boxmodel">Box Model</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero">
+    <h1>Day 2: Display, Position &amp; the Box Model</h1>
+    <p class="tagline">Every demo from today's transcript, live and editable</p>
+  </header>
+
+  <!-- Section 1: Text Styling Part 2 -->
+  <section id="text" class="text-demo">
+    <h2>Text Styling — Part 2</h2>
+    <p class="section-intro">text-decoration, text-transform, text-align, line-height, text-shadow</p>
+    <h1>Headline with text-shadow</h1>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      <span class="label">underline uppercase label</span>
+    </p>
+  </section>
+
+  <!-- Section 4: Display Playground -->
+  <section id="display">
+    <h2>Display Property Playground</h2>
+    <p class="section-intro">block, inline, inline-block, none, flex, grid — side by side</p>
+    <div class="display-playground">
+      <div class="display-swatch swatch-block">display: block</div>
+      <span class="display-swatch swatch-inline">inline</span>
+      <div class="display-swatch swatch-inline-block">inline-block</div>
+      <div class="display-swatch swatch-none">display: none (hidden)</div>
+      <div class="display-swatch swatch-flex">
+        <span>flex</span><span>item</span><span>row</span>
+      </div>
+      <div class="display-swatch swatch-grid">
+        <span>1</span><span>2</span><span>3</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5: inline-block buttons -->
+  <section class="section-alt">
+    <h2>inline-block Button Group</h2>
+    <p class="section-intro">Flows horizontally, keeps width/height control</p>
+    <div class="btn-group">
+      <a href="#" class="btn">Home</a>
+      <a href="#" class="btn">About</a>
+      <a href="#" class="btn">Contact</a>
+    </div>
+  </section>
+
+  <!-- Section 6: Responsive table -->
+  <section id="tables">
+    <h2>Responsive Table Transformation</h2>
+    <p class="section-intro">Resize the browser below 600px to see it collapse into cards</p>
+    <table class="demo-table">
+      <thead>
+        <tr>
+          <th>Header 1</th>
+          <th>Header 2</th>
+          <th>Header 3</th>
+          <th>Header 4</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-label="Header 1">Data 1-1</td>
+          <td data-label="Header 2">Data 1-2</td>
+          <td data-label="Header 3">Data 1-3</td>
+          <td data-label="Header 4">Data 1-4</td>
+        </tr>
+        <tr>
+          <td data-label="Header 1">Data 2-1</td>
+          <td data-label="Header 2">Data 2-2</td>
+          <td data-label="Header 3">Data 2-3</td>
+          <td data-label="Header 4">Data 2-4</td>
+        </tr>
+        <tr>
+          <td data-label="Header 1">Data 3-1</td>
+          <td data-label="Header 2">Data 3-2</td>
+          <td data-label="Header 3">Data 3-3</td>
+          <td data-label="Header 4">Data 3-4</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Section 7: div-emulated table -->
+  <section class="section-alt">
+    <h2>Emulating Tables with div Elements</h2>
+    <p class="section-intro">display: table / table-row / table-cell on plain divs</p>
+    <div class="css-table">
+      <div class="css-table-row css-table-header">
+        <div class="css-table-cell">Name</div>
+        <div class="css-table-cell">Role</div>
+      </div>
+      <div class="css-table-row">
+        <div class="css-table-cell">Kiruthik</div>
+        <div class="css-table-cell">Trainer</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 10: Card grid -->
+  <section id="cards">
+    <h2>Flexible Card Grid</h2>
+    <p class="section-intro">1 column mobile &rarr; 2 tablet (576px) &rarr; 3 desktop (992px)</p>
+    <div class="card-grid">
+      <div class="card">Card 1</div>
+      <div class="card">Card 2</div>
+      <div class="card">Card 3</div>
+      <div class="card">Card 4</div>
+      <div class="card">Card 5</div>
+      <div class="card">Card 6</div>
+    </div>
+  </section>
+
+  <!-- Section 13: box-sizing comparison -->
+  <section id="boxmodel" class="section-alt">
+    <h2>box-sizing: content-box vs border-box</h2>
+    <p class="section-intro">Both boxes are set to width: 250px — inspect them in DevTools</p>
+    <div class="box-sizing-demo">
+      <div class="box-compare box-content">content-box<br>(actual width &gt; 250px)</div>
+      <div class="box-compare box-border">border-box<br>(actual width = 250px)</div>
+    </div>
+  </section>
+
+  <!-- Section 14: Borders -->
+  <section>
+    <h2>Border Styles &amp; Radius</h2>
+    <div class="border-demo">
+      <div class="border-swatch border-solid"></div>
+      <div class="border-swatch border-dotted"></div>
+      <div class="border-swatch border-dashed"></div>
+      <div class="border-swatch border-double"></div>
+    </div>
+    <div class="avatar-demo"></div>
+  </section>
+
+  <!-- Section 15/16: Padding & Margin -->
+  <section class="section-alt spacing-demo">
+    <h2>Padding &amp; Margin</h2>
+    <p class="section-intro">Padding shorthand: 20px 15px 25px 10px (clockwise)</p>
+    <div class="padding-box">This box has asymmetric padding on all four sides.</div>
+
+    <p class="section-intro" style="margin-top: 2rem;">Margin collapse: gap between items 1&ndash;2 is 20px (not 35px)</p>
+    <div class="margin-stack">
+      <div class="margin-item">Element 1 (margin-bottom: 20px)</div>
+      <div class="margin-item">Element 2 (margin-top: 15px, margin-bottom: 30px)</div>
+      <div class="margin-item">Element 3 (margin-top: 25px)</div>
+    </div>
+
+    <div class="centered-box">margin: 0 auto — I'm centered</div>
+  </section>
+
+  <!-- Section 18: Flex gap -->
+  <section>
+    <h2>The Gap Property</h2>
+    <p class="section-intro">Spacing between flex children — no margins needed</p>
+    <div class="flex-gap-demo">
+      <div class="flex-item">1</div>
+      <div class="flex-item">2</div>
+      <div class="flex-item">3</div>
+    </div>
+  </section>
+
+  <footer>
+    Day 2 Demo &mdash; Chapter 02: CSS &mdash; Elysium Academy Full Stack Python Course
+  </footer>
+
+  <script src="static/js/script.js"></script>
+</body>
+</html>

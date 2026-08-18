@@ -1,0 +1,308 @@
+/* components.css — Reusable UI elements */
+
+/* --- Section 4: Display Property Playground --- */
+.display-playground {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-3);
+}
+
+.display-swatch {
+  padding: var(--space-2);
+  border-radius: var(--radius);
+  color: white;
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+.swatch-block        { display: block; width: 100%; background: var(--color-primary); }
+.swatch-inline        { display: inline; background: var(--color-secondary); padding: 4px 8px; }
+.swatch-inline-block   { display: inline-block; width: 140px; background: #e67e22; }
+.swatch-none             { display: none; }
+.swatch-flex               { display: flex; gap: var(--space-1); background: #2ecc71; }
+.swatch-grid                 { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-1); background: #9b59b6; }
+
+/* --- Section 5: inline-block button group --- */
+.btn-group {
+  margin-top: var(--space-3);
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  vertical-align: top;
+  background: var(--color-primary);
+  color: white;
+  border-radius: var(--radius);
+  margin-right: var(--space-1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* --- Section 6: Responsive table --- */
+.demo-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: var(--space-3);
+}
+
+.demo-table th,
+.demo-table td {
+  border: 1px solid var(--color-border);
+  padding: var(--space-1) var(--space-2);
+  text-align: left;
+}
+
+.demo-table th {
+  background: var(--color-bg-light);
+}
+
+@media (max-width: 600px) {
+  .demo-table, .demo-table thead, .demo-table tbody,
+  .demo-table th, .demo-table td, .demo-table tr {
+    display: block;
+  }
+
+  .demo-table th {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  .demo-table tr {
+    margin-bottom: var(--space-2);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+
+  .demo-table td {
+    position: relative;
+    padding-left: 50%;
+    border: none;
+    border-bottom: 1px solid #eee;
+  }
+
+  .demo-table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: var(--space-1);
+    font-weight: bold;
+  }
+}
+
+/* --- Section 7: div-emulated table --- */
+.css-table {
+  display: table;
+  width: 100%;
+  margin-top: var(--space-3);
+  border: 1px solid var(--color-border);
+}
+
+.css-table-row {
+  display: table-row;
+}
+
+.css-table-cell {
+  display: table-cell;
+  padding: var(--space-1) var(--space-2);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.css-table-header .css-table-cell {
+  background: var(--color-bg-light);
+  font-weight: bold;
+}
+
+/* --- Section 9: Hamburger nav --- */
+.site-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-2);
+  background: var(--color-text);
+}
+
+.nav-toggle {
+  display: block;
+  padding: var(--space-1);
+}
+
+.nav-toggle span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: white;
+  margin: 5px 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.nav-toggle.active span:nth-child(1) { transform: rotate(-45deg) translate(-5px, 6px); }
+.nav-toggle.active span:nth-child(2) { opacity: 0; }
+.nav-toggle.active span:nth-child(3) { transform: rotate(45deg) translate(-5px, -6px); }
+
+.nav-links {
+  display: none;
+  width: 100%;
+}
+
+.nav-links.active {
+  display: block;
+}
+
+.nav-links li a {
+  display: block;
+  color: white;
+  padding: var(--space-1) var(--space-2);
+}
+
+.nav-links li a:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+@media (min-width: 768px) {
+  .nav-toggle {
+    display: none;
+  }
+
+  .nav-links {
+    display: flex;
+    width: auto;
+    gap: var(--space-2);
+  }
+
+  .nav-links li a {
+    padding: var(--space-1);
+  }
+}
+
+/* --- Section 10: Card grid --- */
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-2);
+  margin-top: var(--space-3);
+}
+
+@media (min-width: 576px) {
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .card-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.card {
+  background: var(--color-bg-light);
+  padding: var(--space-3);
+  border-radius: var(--radius);
+  text-align: center;
+  border: 1px solid var(--color-border);
+}
+
+/* --- Section 13: box-sizing comparison --- */
+.box-sizing-demo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  margin-top: var(--space-3);
+}
+
+.box-compare {
+  padding: var(--space-2);
+  border: 5px solid var(--color-secondary);
+  background: #eef;
+  color: var(--color-text);
+  font-size: 1.3rem;
+}
+
+.box-content { box-sizing: content-box; width: 250px; }
+.box-border  { box-sizing: border-box;  width: 250px; }
+
+/* --- Section 14: Border styles --- */
+.border-demo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-top: var(--space-3);
+}
+
+.border-swatch {
+  width: 140px;
+  height: 80px;
+  border-width: 3px;
+  border-color: var(--color-primary);
+}
+
+.border-solid  { border-style: solid; }
+.border-dotted { border-style: dotted; }
+.border-dashed { border-style: dashed; }
+.border-double { border-style: double; }
+
+.avatar-demo {
+  width: 100px;
+  height: 100px;
+  background: var(--color-secondary);
+  border-radius: 50%;
+  margin-top: var(--space-3);
+}
+
+/* --- Section 15/16: Padding & margin demo --- */
+.spacing-demo {
+  margin-top: var(--space-3);
+}
+
+.padding-box {
+  background: var(--color-bg-light);
+  border: 1px solid var(--color-border);
+  padding: 20px 15px 25px 10px; /* top right bottom left */
+}
+
+.margin-stack .margin-item {
+  background: var(--color-primary);
+  color: white;
+  padding: var(--space-1);
+  text-align: center;
+}
+
+.margin-stack .margin-item:nth-child(1) { margin-bottom: 20px; }
+.margin-stack .margin-item:nth-child(2) { margin-top: 15px; margin-bottom: 30px; }
+.margin-stack .margin-item:nth-child(3) { margin-top: 25px; }
+
+.centered-box {
+  width: 300px;
+  margin: var(--space-2) auto;
+  background: var(--color-secondary);
+  color: white;
+  padding: var(--space-2);
+  text-align: center;
+  border-radius: var(--radius);
+}
+
+/* --- Section 18: Flex gap demo --- */
+.flex-gap-demo {
+  display: flex;
+  gap: var(--space-3);
+  padding: var(--space-2);
+  background: var(--color-bg-light);
+  border-radius: var(--radius);
+  margin-top: var(--space-3);
+}
+
+.flex-gap-demo .flex-item {
+  flex: 1;
+  padding: var(--space-2);
+  background: var(--color-primary);
+  color: white;
+  border-radius: var(--radius);
+  text-align: center;
+}
